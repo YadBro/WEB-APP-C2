@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+:root{
+    --botton-color: #111727;
+    --body-background-color: #e2e6ea;
+    --text-color-pudar: #616161;
+}
+
+.text-color-pudar{
+    color: var(--text-color-pudar);
+}
+/* .actions{
+    display: flex;
+} */
+.test1{
+    margin-top: 100%;
+}
+.actions .edit-button  {
+    padding: 3px 10px;
+    text-align: center;
+    border: none;
+    color: white;
+    width: 50%;
+    margin-right: 5px;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #111727;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.actions .delete-button  {
+    padding: 3px 10px;
+    width: 50%;
+    margin-left: 5px;
+    border-radius: 10px;
+    align-items: left;
+    text-align: center;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #111727;
+    text-decoration: none;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-background-color);
+}
+.text{
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    word-spacing: 2px;
+}
+.text-bold{
+    text-align: justify;
+    word-spacing: 2px;
+}
+.icon-logo a {
+    text-decoration: none;
+    color: black;
+}
+.technologies img{
+    width: 30px;
+    margin-right: 15px;
+    margin-bottom: 35px;
+}
+.duration {
+    color: var(--text-color-pudar);
+}
+.my-card{
+    border-radius: 10px;
+    box-shadow: 1px 1px 90px rgba(0, 0, 0, 0.304); 
+}
+.my-card img{
+    border-radius: 25px;
+}
+.out-card {
+    background-color: white;
+}
+.my-flex{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width:1000px){
+    .my-flex{
+        flex-direction: column;
+    }
+}
+
+.form-check-input{
+    cursor: pointer;
+}
+.form-check-label{
+    color: var(--text-color-pudar);
+}
+.flex-68{
+    flex: 68%;
+}
+.flex-32{
+    flex: 32%;
+}
+
+.form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='50' viewBox='0 0 24 24' width='100' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-size: 43px 43px;
+}
+
+.contact-me-button {
+    background-color: var(--botton-color);    
+}
+.contact-me-button a, button > a{
+    text-decoration: none;
+}
+.contact-me-button button{
+    border: none;
+    background-color: transparent;
+}
+
+/* NAV START */
+/*
+nav {
+    display: flex;
+    height: 7vh;
+    background-color: #f4f4f4;
+    font-size: 1.1em;
+}
+
+
+nav div {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+nav .left {
+    justify-content: flex-start;
+    margin-left: 5%;
+    align-items: center;
+}
+
+nav .left a {
+    text-decoration: none;
+    color: black;
+}
+
+/* nav .left ul a, nav .left img{
+    
+}
+
+nav .left ul {
+    margin-left: 30px;
+}
+
+nav .left li {
+    display: inline;
+    padding: 10px;
+}
+
+nav .left img {
+    width: 60px;
+}
+
+/* .contact-me-button {
+    justify-content: flex-end;
+    margin-right: 5%;
+} */
+
+
+
+/* NAV END */
+
+
+
+/* CONTACT FROM START */
+/*
+.container-form {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-form form input,
+select,
+textarea {
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+    margin-top: 1px;
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.355);
+}
+
+
+.container-form form select option {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.container-form form textarea {
+    height: 200px;
+    resize: none;
+}
+
+.container-form form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-size: 43px 43px;
+}
+
+.container-form form label {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.container-form h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.container-form form button {
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #111727;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.container-form form .button {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.container-form .input-file input {
+    background-color: white;
+}
+
+.container-form .input-file input[type=file]::-webkit-file-upload-button {
+    border: none;
+    border-radius: 10px;
+    background-color: #E4E4E4;
+    cursor: pointer;
+    padding: 5px 20px;
+}
+
+/* CONTACT FROM END */
+
+
+
+/* CARD CLASS IN INDEX START */
+
+
+/*
+
+@media (max-width: 600px) {
+    .out-card {
+        flex-direction: column;
+    }
+}
+
+.content-card-left {
+    justify-content: flex-left;
+    align-items: flex-end;
+    flex: 60%;
+    margin-top: 100px;
+    margin-left: 70px;
+    margin-bottom: 50px;
+
+}
+
+.content-card-left .text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    word-spacing: 3px;
+    line-height: 130%;
+
+}
+
+.content-card-right {
+    justify-content: flex-right;
+    align-items: flex-start;
+    flex: 40%;
+    padding: 50px;
+
+}
+
+.content-card-right img {
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+
+.card-profile {
+    background-color: #f8f5f5;
+    border-radius: 10px;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.304);
+    margin-top: 50px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.content {
+    padding: 5% 10%;
+    background-color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+}
+
+.card-profile p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.card-profile h1 small {
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.contact-button {
+    margin-top: 20px;
+    border: none;
+    background-color: #111727;
+    color: white;
+    padding: 5px 30px;
+    border-radius: 30px;
+    font-size: 25px;
+    display: inline;
+}
+
+.cv {
+    margin-top: 10px;
+    font-size: 25px;
+    display: inline;
+
+}
+
+.cv p {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.cv button,
+p {
+    display: inline;
+}
+
+.cv button a {
+    text-decoration: none;
+    color: white;
+}
+
+/* CARD CLASS IN INDEX END */
+
+
+
+
+/* ICON CLASS START */
+
+/*
+.icon-logo {
+    margin-top: 50px;
+    font-size: 55px;
+}
+
+.icon-logo a i {
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+/* ICON CLASS END */
+
+
+
+
+
+/* INPUT GROUP START */
+/*
+.input-group {
+    display: flex;
+    width: 100%;
+}
+
+.input-group .start {
+    margin-right: 10px;
+    flex: 50%;
+}
+
+.input-group .end {
+    margin-left: 10px;
+    flex: 50%;
+}
+
+/* INPUT GROUP END */
+
+
+
+/* TECHNOLOGIES CLASS START */
+/*
+
+.technologies-checkbox {
+    margin-bottom: 30px;
+}
+
+.technologies-checkbox .checkbox-input {
+    display: flex;
+}
+.technologies-checkbox .checkbox-input .checkbox-left{
+    margin-right: 50px;
+    justify-content: center;
+}
+
+.technologies-checkbox .checkbox-input .checkbox-left input[type=checkbox]{
+    border: none;
+    margin-right: 10px;
+}
+.technologies-checkbox .checkbox-input .checkbox-right input[type=checkbox]{
+    border: none;
+    margin-right: 10px;
+}
+
+.technologies-checkbox .checkbox-input .checkbox-right{
+    flex: 50%;
+    margin-left: 30px;
+
+}
+
+.technologies-checkbox .checkbox-input input {
+    margin: 10px 0 0 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 500px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.technologies-checkbox .checkbox-input p {
+    font-size: 1.2rem;
+    color: #686364;
+    margin-left: 3px;
+}
+
+
+
+
+/* TECHNOLOGIES CLASS END */
+
+
+/* MY PROJECTS CLASS START */
+/*
+
+.myproject-content {
+    width: 100%;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.myproject-content .projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 25px;
+    justify-content: center;
+}
+
+.projects-list .project-card {
+    background-color: white;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.355);
+}
+
+.project-card .card {
+    padding: 20px;
+    width: 400px;
+}
+
+.projects-list .project-card img {
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+}
+
+.projects-list .project-card .card-title {
+    margin-top: 10px;
+}
+.projects-list .project-card .card-title h3 a{
+    text-decoration: none;
+    color: black;
+}
+
+.projects-list .project-card .card-duration {
+    color: #979292;
+    font-size: 19px;
+}
+
+.projects-list .project-card .card-description {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.projects-list .project-card .card-description p {
+    font-size: 18px;
+    line-height: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    letter-spacing: normal;
+}
+
+.projects-list .project-card .logos {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.projects-list .project-card .logos .img-icon{
+    display: inline;
+}
+.projects-list .project-card .logos .img-icon img{
+    width: 30px;
+    padding: 10px;
+}
+
+.project-card .card-title,
+.card-duration,
+.card-description,
+.logos {
+    text-align: left;
+}
+
+.project-card .card .actions{
+    display: flex;
+}
+
+
+.project-card .card .actions .edit-button  {
+    padding: 5px 10px;
+    text-align: center;
+    border: none;
+    color: white;
+    width: 50%;
+    margin-right: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #111727;
+    cursor: pointer;
+}
+
+.project-card .card .actions .delete-button  {
+    padding: 5px 10px;
+    width: 50%;
+    margin-left: 5px;
+    border-radius: 10px;
+    align-items: left;
+    text-align: center;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #111727;
+    border: none;
+
+}
+/* MY PROJECTS CLASS END */
+
+
+/** CONTENT STYLE START **/
+/*
+
+.content-title{
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    height: 20vh;
+}
+.container-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 50px;
+}
+
+
+
+/* CONTENT CARD TOP START */
+/*
+
+.container-content .content-card-top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+
+.container-content .content-card-top .project-image{
+    flex: 60%;
+    padding-right: 50px;    
+}
+.container-content .content-card-top .project-image img{
+    width: 100%;
+    height: 95%;
+}
+.container-content .content-card-top .project-about{
+    flex: 40%;
+}
+
+.content-card-top .project-about .project-duration h2{
+    margin-bottom: 20px;
+}
+
+.content-card-top .project-about .project-duration i{
+    margin-bottom: 40px;
+}
+
+.content-card-top .project-about .project-duration small{
+    color: rgba(6, 0, 0, 0.623);
+    margin-left: 10px;
+    font-size: 20px;
+}
+/* CONTENT CARD TOP END */
+
+
+/* CONTENT CARD BUTTOM START */
+/*
+
+.content-card-buttom .content-description{
+    text-align: justify;
+
+}
+.content-card-buttom .content-description p{
+    line-height: 30px;
+    word-spacing: 5px;
+}
+
+.project-technologies .technology-icons{
+    display: flex;
+    margin-top: 25px;
+}
+.project-technologies .technology-icons .left-icons img{
+    width: 30px;
+    margin-right: 15px;
+    padding-bottom: 15px;
+}
+.project-technologies .technology-icons .left-text p{
+    color: rgba(6, 0, 0, 0.623);
+    font-size: 20px;
+    line-height: 39px;
+}
+.project-technologies .technology-icons .right-icons img{
+    margin-left: 50px;
+    width: 30px;
+    margin-right: 15px;
+    padding-bottom: 15px;
+}
+.project-technologies .technology-icons .right-text p{
+    color: rgba(6, 0, 0, 0.623);
+    font-size: 20px;
+    line-height: 39px;
+}
+
+/* .project-technologies .technology-icons .right-icons{
+    flex: 50%;
+}
+.content-card-buttom .technology-icons .left-icons{
+    flex: 50%;
+} */
+
+/** CONTENT STYLE END **/
+
+/*
+.contact-button {
+    margin-top: 20px;
+    border: none;
+    background-color: #111727;
+    color: white;
+    padding: 5px 28px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 30px;
+}
+
+.card-content {
+    text-align: center;
+    justify-content: flex-end;
+}
+
+.card-profile {
+    background-color: #f8f5f5;
+    border-radius: 10px;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.304);
+}
+
+.card-profile p{
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+    font-size: 1.3em; 
+    font-weight: bold;
+}
+
+.out-card .content-card-left{
+    justify-content:flex-end;
+    align-items: flex-end;
+}
+.out-card .content-card-right{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.icon-logo{
+    margin-top: 50px;
+} */

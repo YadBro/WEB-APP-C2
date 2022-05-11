@@ -1,0 +1,138 @@
+    {{!-- HEADER START --}}
+        {{> header }}
+    {{!-- HEADER END --}}
+
+    <!-- NAVBAR START -->
+        {{> navbar }}
+    <!-- NAVBAR END -->
+
+
+    <!-- MY PROJECTS CONTENT START -->
+    <div class="container">
+        <div class="row mt-5">
+
+            {{#each data}}
+            <h1 class="text-center">{{ this.project_name }}</h1>
+            <div class="my-flex mt-5">
+                <div class="justify-content-start flex-68 me-5">
+                    <img src="/uploads/{{this.image}}" alt="Project Image" class="img-fluid">
+                </div>
+                <div class="justify-content-end flex-32 ms-3">
+                    <h3>Duration</h3>
+                    <i class="fa-solid fa-calendar-days fa-2xl mt-4 me-4"></i><small class="fs-5 text-color-pudar">{{this.start_date}} - {{this.end_date}}</small><br>
+                    <i class="fa-solid fa-clock fa-2xl mt-5 me-4"></i><small class="fs-5 text-color-pudar">{{this.distance}}</small>
+                    <br>
+                    <h3 class="mt-5">Technologies</h3>
+                    <div class="col-md-10">
+                        <div class="mb-3 d-flex flex-wrap">
+                            {{#each this.technologies}}
+                                {{#if (isFalse this 'undefined')}}
+                                <div class="mb-3">
+                                    <img width="30px" height="30px" class="me-1" src="/public/assets/img/{{this}}.png" id="nodeJsIcon"
+                                    alt="nodeJsIcon"><small class="fs-5 text-color-pudar me-4">{{this}}</small>
+                                </div>
+                                {{/if}}
+                            {{/each}}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-bold mt-5 fw-normal lh-base">{{this.description}}</p>
+            {{/each}}
+        </div>
+    </div>
+    <!-- MY PROJECTS CONTENT END -->
+
+
+    <!-- DUMMY -->
+
+    <!-- <div class="content-title">
+        <h1>Dumbways Web App</h1>
+    </div>
+    <div class="container-content">
+        <div class="content-card-top">
+            <div class="project-image">
+                <img src="Soal/BACK.jpg" alt="Content Image">
+            </div>
+            <div class="project-about">
+                <div class="project-duration">
+                    <h2>Duration</h2>
+                    <i class="fa-solid fa-calendar-days fa-xl"></i><small>12 Jan 2021 - 11 Feb 2021</small><br>
+                    <i class="fa-solid fa-clock fa-xl"></i><small>1 Month</small>
+                </div>
+                <div class="project-technologies">
+                    <h2>Technologies</h2>
+                    <div class="technology-icons">
+                        <div class="left-icons">
+                            <img src="assets/img/node-js.png" id="nodeJsIcon" alt="nodeJsIcon"><br>
+                            <img src="assets/img/react-js.png" id="reactJsIcon" alt="reactJsIcon">
+                        </div>
+                        <div class="left-text">
+                            <p>Node Js</p><br>
+                            <p>React Js</p>
+                        </div>
+                        <div class="right-icons">
+                            <img src="assets/img/next-js.png" id="nextJsIcon" alt="nextJsIcon"><br>
+                            <img src="assets/img/typescript.png" id="typeScriptIcon" alt="typeScriptIcon">
+                        </div>
+                        <div class="right-text">
+                            <p>Next Js</p><br>
+                            <p>TypeScript</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-card-buttom">
+            <div class="content-description">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus explicabo officia assumenda eligendi
+                    temporibus similique sequi suscipit, molestiae, nesciunt ut voluptates alias amet ipsum sint laborum
+                    perspiciatis modi sapiente? Incidunt harum a dolorem accusamus. Pariatur dignissimos in laboriosam
+                    illo voluptatum iure provident culpa sequi esse. Eum perspiciatis consectetur commodi iusto
+                    aspernatur aliquam maxime eos, numquam debitis ipsam magnam pariatur dolores nihil. Laborum earum
+                    consectetur nemo dolorum accusantium architecto! Iure excepturi, sed voluptatem earum at labore
+                    possimus itaque repellendus expedita dolorum ex adipisci saepe, facere voluptas autem tempora
+                    mollitia eligendi? Quasi provident dolorum laborum aperiam est, qui molestiae neque quisquam
+                    mollitia officia iste amet atque nesciunt voluptates porro quis id autem beatae maiores ab magni
+                    itaque. Voluptatum, consequatur vero corrupti sed vel ea iusto illum. Tempore ipsam at, nihil
+                    tenetur earum illo maxime cum aut nulla esse facilis magnam corrupti delectus consectetur sit vel
+                    nobis a sed consequatur voluptatibus commodi sapiente nisi? Repellat molestiae inventore,
+                    repellendus facere dolorum nisi soluta est, quisquam veniam dolorem recusandae adipisci quod sequi
+                    eveniet ad debitis quia odio, ut nulla. Similique omnis libero sint ab, fugiat illo facilis ratione
+                    atque rerum tempore veniam aliquid temporibus laborum reprehenderit quibusdam magnam nesciunt, est
+                    consequatur. Praesentium autem doloremque reprehenderit voluptatum perferendis omnis quasi quam
+                    molestias mollitia error. Molestias sequi animi aspernatur dignissimos ducimus tenetur officiis
+                    quaerat! Optio quidem, laboriosam tempore soluta, quas, modi asperiores deserunt eius illo quod
+                    provident blanditiis. Perspiciatis fugiat velit nihil voluptate eius dolore magni quis nostrum
+                    mollitia. Tempore alias quod cumque porro, nemo nisi laudantium totam aliquam at fuga perferendis
+                    quas repellendus obcaecati non fugiat quisquam commodi vitae adipisci expedita id. Qui hic, ipsam
+                    minus nisi eligendi error voluptates accusamus neque maiores at dolores? Iste temporibus ea
+                    doloribus voluptatem accusamus hic quibusdam et ut corrupti consectetur facilis accusantium nisi
+                    similique, voluptatum laudantium? Dolorem sapiente eius tenetur dolore. Minus reiciendis doloremque
+                    nobis aliquam incidunt quisquam expedita. Ut voluptatibus, tempore atque vitae incidunt neque?
+                    Expedita fuga corporis, dolor veniam in explicabo eum, quam beatae quidem ducimus quia accusantium
+                    voluptas nulla, eaque qui. Maxime architecto vel error ducimus illo. Quis qui vero, nobis laudantium
+                    asperiores doloremque porro at ex sunt explicabo expedita accusantium libero quod, veniam labore ad.
+                    Nam eaque cupiditate saepe amet ratione ipsa enim, a quo sequi corrupti! Maiores, corporis numquam
+                    corrupti explicabo ut quae aspernatur repudiandae ratione quo quod repellendus suscipit quisquam
+                    deleniti. Distinctio, explicabo pariatur voluptatum quisquam beatae harum quas voluptas inventore
+                    cupiditate iusto fugit optio rem? Illo, tempora doloremque? Ut consequuntur accusantium minus alias
+                    quis dignissimos quasi illum doloremque quidem molestias. Asperiores quaerat esse enim nobis
+                    similique eos, modi minus iste deleniti magni! At cumque odio obcaecati aut quia. Odio dolorem
+                    reiciendis, iste dignissimos deleniti nam! Et earum labore, animi voluptatum dolore asperiores
+                    laudantium, repudiandae fugiat non velit ipsa dolorem similique consectetur. Minima sint, commodi
+                    sunt quam saepe, animi porro alias amet earum obcaecati id! Cum officiis nemo sint tenetur
+                    accusantium inventore unde explicabo velit aliquam iste voluptate eligendi possimus eos itaque,
+                    atque ab laudantium! Consequatur aperiam quia accusantium ex porro cum fuga!</p>
+            </div>
+        </div>
+    </div> -->
+    <!-- <script src="contact.js"></script> -->
+    <!-- <script src="blog.js"></script> -->
+    <!-- Linking Bootstrap Javascript CDN -->
+
+    <!-- <script src="removeStorageKeys.js"></script> -->
+    {{!-- FOOTER START --}}
+        {{> footer }}
+    {{!-- FOOTER END --}}

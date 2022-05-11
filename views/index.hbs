@@ -1,0 +1,127 @@
+    {{!-- HEADER START --}}
+        {{> header }}
+    {{!-- HEADER END --}}
+
+    <!-- NAVBAR START -->
+        {{> navbar }}
+    <!-- NAVBAR END -->
+    {{#if messages.successLoginMessage}}
+    <div class="alert alert-success" role="alert">
+        <div class="container">
+            <small class="fs-5">{{messages.successLoginMessage}}</small>
+        </div>
+    </div>
+    {{/if }}
+
+    {{#if messages.addProjectSuccess}}
+    <div class="alert alert-success" role="alert">
+        <div class="container">
+            <small class="fs-5">{{messages.addProjectSuccess}}</small>
+        </div>
+    </div>
+    {{/if }}
+
+    {{#if messages.successLogoutMessage }}
+    <div class="alert alert-success" role="alert">
+        <div class="container">
+            <small class="fs-5">{{messages.successLogoutMessage}}</small>
+        </div>
+    </div>
+    {{/if }}
+
+    {{#if messages.errorLogoutMessage }}
+    <div class="alert alert-warning" role="alert">
+        <div class="container">
+            <small class="fs-5">{{messages.errorLogoutMessage}}</small>
+        </div>
+    </div>
+    {{/if }}
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="my-flex out-card p-5 rounded-3 shadow">
+                <div class="justify-content-start me-5">
+                    <h2>Welcome to my hut</h2>
+                    <p class="text mt-lg-4 fw-normal lh-base">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sequi, possimus vitae dolore impedit illo ab distinctio nihil assumenda deleniti? Recusandae
+                        dicta id voluptates facilis aspernatur quo dolores suscipit nihil illo illum quibusdam delectus
+                        quis autem cumque veritatis quasi non similique praesentium deleniti, temporibus fuga nisi,
+                        omnis cum error. Esse praesentium rem minima facere odit tempore iusto quo voluptates recusandae
+                        nemo officia sunt saepe illum debitis omnis ea cumque, sequi accusamus neque ipsam ad laborum
+                        libero? Eaque alias placeat temporibus, cumque suscipit provident molestiae nam porro
+                        consequatur odit a veritatis voluptas debitis ipsum eos, unde eligendi ut natus iusto neque
+                        dolorem animi, eius quidem quis? Animi sint dolore veniam labore minima quod quia delectus nisi
+                        dolorum, vero reiciendis sit, odit assumenda fuga? Quas id officiis reiciendis aspernatur
+                        laboriosam amet sapiente fugiat inventore illum maiores, ut aperiam doloremque explicabo
+                        deleniti ullam dicta repudiandae ab rem laborum dolorum facilis! Quas ex at incidunt?</p>
+                    <div class="input-group text-center mt-5">
+                        <div class="col-md-2">
+                            <a href="#"
+                                class="contact-me-button text-white pt-2 pe-5 ps-5 pb-2 rounded-pill text-decoration-none fs-5">contact</a>
+                        </div>
+                        <div class="col-md-5 fs-4 ms-3">
+                            <p>dowload CV &nbsp;<i class="fa-solid fa-download fa-lg"></i></p>
+                        </div>
+                    </div>
+                    <div class="icon-logo mt-5">
+                        <a class="m-2" href="https://www.linkedin.com/school/dumbways-id/" target="_blank"><i
+                                class="fa-brands fa-linkedin fa-2xl"></i></a>
+                        <a class="m-2" href="https://www.instagram.com/dumbways.id/" target="_blank"><i
+                                class="fa-brands fa-instagram-square fa-2xl"></i></a>
+                        <a class="m-2" href="https://web.facebook.com/dumbwaysdotid?_rdc=1&_rdr" target="_blank"><i
+                                class="fa-brands fa-facebook fa-2xl"></i></a>
+                        <a class="m-2" href="#"><i class="fa-brands fa-twitter-square fa-2xl"></i></a>
+                    </div>
+                </div>
+                <div class="justify-content-end">
+                    <div class="card shadow rounded-3" style="width: 25rem;">
+                        <img src="/public/assets/img/my-img.PNG" class="card-img-top" alt="MyImage">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Yadi Apriyadi</h3>
+                            <small class="card-text">Fullstack Developer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="out-card p-5 mt-5 rounded-3 shadow">
+        <h1 class="text-center" id="myproject">MY PROJECTS</h1>
+        <div class="mt-5 d-flex flex-fill flex-row flex-wrap justify-content-center">
+
+
+            
+            {{#each data}}
+            <div class="card my-card m-3" style="width: 27rem;">
+                <img src="/uploads/{{this.image}}" class="card-img-top w-100 h-50 p-3"
+                    alt="My Project Image">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <h5 class="card-title"><a href="/detail-project/{{this.project_id}}" style="text-decoration: none; color:black">{{ this.project_name }} - {{ this.yearEnd }}</a></h5>
+                    <small class="fs-6 duration">duration: {{this.distance}}</small>
+                    <small class="fs-6 duration">by {{this.name}}</small>
+                    <p class="card-text mt-4 mb-4">{{this.intro}}</p>
+                    <div class="technologies mt-3">
+                        {{#each this.technologies}}
+                            {{#if (isFalse this 'undefined')}}
+                            <img src="/public/assets/img/{{this}}.png" alt="">
+                            {{/if}}
+                        {{/each}}
+                    </div>
+                    {{#if this.isLogin }}
+                    <div class="actions d-flex">
+                        <a href="/update/{{this.project_id}}" class="edit-button">edit</a>
+                        <a onclick="const tes= confirm('Yakin mau di delete?'); if(tes === false) {return false}" href="/delete/{{this.project_id}}" class="delete-button">delete</a>
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+            {{/each }}
+        </div>
+    </div>
+    <!-- <script src="blog.js"></script> -->
+    <!-- Linking Bootstrap Javascript CDN -->
+    <!-- <script src="removeStorageKeys.js"></script> -->
+
+    {{!-- FOOTER START --}}
+        {{> footer }}
+    {{!-- FOOTER END --}}

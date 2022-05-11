@@ -1,0 +1,54 @@
+<!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="https://dumbways.id">
+                <img src="/public/assets/img/dumbways_logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-4 ms-3">
+                        <a class="nav-link fs-5 {{#if (isTrue 'Home' title) }}active{{/if}}" aria-current="page" href="/">Home</a>
+                    </li>
+                    {{#if isLogin }}
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 {{#if (isTrue 'Project' title) }}active{{/if}}" href="/project">Add Project</a>
+                    </li>
+                    {{/if }}
+                </ul>
+                <div class="d-flex mt-1">
+                    {{#if isLogin }}
+                    <ul class="navbar-nav me-4 mb-2 mb-lg-0">
+                        <li class="nav-item me-2 ms-3">
+                            {{!-- <a class="nav-link fs-5 {{#if (isTrue 'User' title) }}active{{/if}}" aria-current="page" href="/user">Hello {{user.name}},</a> --}}
+                            <small class="nav-link fs-5 active">Hello {{user.name}},</small>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 {{#if (isTrue 'Logout' title) }}active{{/if}}" href="/logout">logout</a>
+                        </li>
+                    </ul>
+                    {{else}}
+                    <ul class="navbar-nav me-4 mb-2 mb-lg-0">
+                        <li class="nav-item me-2 ms-3">
+                            <a class="nav-link fs-5 {{#if (isTrue 'Register' title) }}active{{/if}}" aria-current="page" href="/register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 {{#if (isTrue 'Login' title) }}active{{/if}}" href="/login">Login</a>
+                        </li>
+                    </ul>
+                    {{/if }}
+
+                    <div class="contact-me-button pt-2 pb-1 pe-3 ps-3 rounded-3">
+                        <a href="/contact" class="text-white">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    

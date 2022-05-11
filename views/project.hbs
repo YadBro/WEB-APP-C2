@@ -1,0 +1,106 @@
+    {{!-- HEADER START --}}
+        {{> header }}
+    {{!-- HEADER END --}}
+
+    <!-- NAVBAR START -->
+        {{> navbar }}
+    <!-- NAVBAR END -->
+
+{{#if messages.multerError }}
+<div class="alert alert-warning" role="alert">
+    <div class="container">
+        <small class="fs-5">{{messages.multerError}}</small>
+    </div>
+</div>
+{{/if }}
+
+{{#if messages.unknownError }}
+<div class="alert alert-warning" role="alert">
+    <div class="container">
+        <small class="fs-5">{{messages.unknownError}}</small>
+    </div>
+</div>
+{{/if }}
+
+<!-- FOR ADD PROJECT START -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <h1 class="text-center mt-5 mb-5">ADD MY PROJECT</h1>
+                
+                <form action="/project" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="inputName" class="form-label fs-5">Project Name</label>
+                        <input name="inputName" type="text" class="form-control rounded-3 shadow pt-3 pb-3" autocomplete="true"
+                            id="inputName">
+                    </div>
+                    <div class="input-group col-md-12 mt-4">
+                        <div class="mb-3 col-md-6 pe-2">
+                            <label for="inputStartDate" class="form-label fs-5">Start Date</label>
+                            <input name="inputStartDate" type="date" class="form-control rounded-3 shadow pt-3 pb-3" id="inputStartDate">
+                        </div>
+                        <div class="mb-3 col-md-6 ps-2">
+                            <label for="inputEndDate" class="form-label fs-5">End Date</label>
+                            <input name="inputEndDate" type="date" id="inputEndDate" class="form-control rounded-3 shadow pt-3 pb-3">
+                        </div>
+                    </div>
+                    <div class="mb-3 mt-4">
+                        <label for="inputDescription" class="form-label fs-5">Description</label>
+                        <textarea name="inputDescription" class="form-control rounded-3 shadow" id="inputDescription" rows="5"></textarea>
+                    </div>
+                    <div class="mb-3 mt-4">
+                        <div class="d-block">
+                            <label for="inputTechnologies" class="form-label fs-5">Technologies</label>
+                        </div>
+                        <div class="form-check form-check-inline ms-3 p-2 me-5">
+                            <input class="form-check-input p-2 me-2 shadow" name="nodeJsTechnology" type="checkbox"
+                             id="flexCheckDefault" value="node-js">
+                            <label class="form-check-label fs-5" for="flexCheckDefault">
+                                Node Js
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline p-2">
+                            <input class="form-check-input p-2 me-2 shadow" name="reactJsTechnology" type="checkbox"
+                             id="flexCheckDefault" value="react-js">
+                            <label class="form-check-label fs-5" for="flexCheckDefault">
+                                React Js
+                            </label>
+                        </div>
+                        <div class="d-block">
+                            <div class="form-check form-check-inline ms-3 p-2 me-5">
+                                <input class="form-check-input p-2 me-2 shadow" name="nextJsTechnology" type="checkbox"
+                                 id="flexCheckDefault" value="next-js">
+                                <label class="form-check-label fs-5" for="flexCheckDefault">
+                                    Next Js
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline ms-2 p-2">
+                                <input class="form-check-input p-2 me-2 shadow" name="typeScriptTechnology"
+                                    type="checkbox" id="flexCheckDefault" value="typescript">
+                                <label class="form-check-label fs-5" for="flexCheckDefault">
+                                    TypeScript
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 mt-4">
+                        <label for="inputFile" class="form-label fs-5">Upload Image</label>
+                        <input name="inputFile" class="form-control rounded-3 shadow pt-3 pb-3" type="file" id="inputFile">
+                    </div>
+                    <div class="contact-me-button float-end rounded-pill pt-2 pb-2 pe-3 ps-3">
+                        <!-- onclick="addBlog(event)"
+                        -->
+                        <button type="submit" class="text-white pe-2 ps-2">submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- MY PROJECTS CONTENT END -->
+
+    {{!-- <script src="/public/assets/js/contact.js"></script> --}}
+
+    <!-- Linking Bootstrap Javascript CDN -->
+    <!-- <script src="removeStorageKeys.js"></script> -->
+
+    {{> footer }}

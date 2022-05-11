@@ -1,0 +1,101 @@
+    {{!-- HEADER START --}}
+        {{> header }}
+    {{!-- HEADER END --}}
+
+    <!-- NAVBAR START -->
+        {{> navbar }}
+    <!-- NAVBAR END -->
+
+    <!-- FORM CONTACT START -->
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <h1 class="mt-5 text-center">GET IN TOUCH</h1>
+                <form class="mt-5 form">
+                    <div class="mb-3" id="nameInput">
+                        <label for="name" class="form-label fs-5">Name</label>
+                        <input type="text" class="form-control pt-3 pb-3 rounded-3 shadow" id="name">
+                    </div>
+                    <div class="mb-3" id="emailInput">
+                        <label for="email" class="form-label fs-5">Email</label>
+                        <input type="email" class="form-control pt-3 pb-3 rounded-3 shadow" id="email">
+                    </div>
+                    <div class="mb-3" id="phoneInput">
+                        <label for="phone" class="form-label fs-5">Phone Number</label>
+                        <input type="tel" class="form-control pt-3 pb-3 rounded-3 shadow" id="phone">
+                    </div>
+                    <div class="mb-3" id="subjectInput">
+                        <label for="subject" class="form-label fs-5">Subject</label>
+                        <select id="subject" class="form-select pb-3 pt-3 rounded-3 shadow">
+                            <option hidden></option>
+                            <option value="Let's Talk">Let's Talk</option>
+                            <option value="Let's Collaboration">Let's Collaboration</option>
+                            <option value="I'am Hiring">I'am Hiring</option>
+                        </select>
+                    </div>
+                    <div class="mb-3" id="messageInput">
+                        <label for="inputDescription" class="form-label fs-5">Description</label>
+                        <textarea class="form-control rounded-3 shadow" id="inputDescription" rows="5"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="btn float-end float-end rounded-pill pt-2 pb-2 pe-4 ps-4 bg-dark text-white">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORM CONTACT END -->
+
+
+
+
+
+
+
+
+
+
+    <!-- 
+    <div class="container-form">
+        <h1>GET IN TOUCH</h1>
+        <form class="form">
+            <div id="nameInput">
+                <label for="name" id="nameLabel">Name</label>
+                <input id="name" type="text">
+            </div>
+            <div id="emailInput">
+                <label for="email" id="emailLabel">Email</label>
+                <input id="email" type="email">
+            </div>
+            <div id="phoneInput">
+                <label for="phone" id="phoneLabel">Phone Number</label>
+                <input id="phone" type="tel">
+            </div>
+            <div id="subjectInput">
+                <label for="subject" id="subjectLabel">Subject</label>
+                <select id="subject">
+                    <option selected hidden></option>
+                    <option value="Let's Talk">Let's Talk</option>
+                    <option value="Let's Collaboration">Let's Collaboration</option>
+                    <option value="I'am Hiring">I'am Hiring</option>
+                </select>
+            </div>
+            <div id="messageInput">
+                <label for="message" id="messageLabel">Your Message</label>
+                <textarea id="message"></textarea>
+            </div>
+            <div class="button">
+                <button type="submit">submit</button>
+            </div>
+        </form>
+    </div> -->
+
+
+
+    <script src="/public/assets/js/contact.js"></script>
+    <!-- <script src="blog.js"></script> -->
+    <!-- Linking Bootstrap Javascript CDN -->
+    <!-- <script src="removeStorageKeys.js"></script> -->
+
+    {{> footer }}
